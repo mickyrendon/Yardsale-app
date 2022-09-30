@@ -20,6 +20,10 @@
             --dark: #232830;
             --hospital-green: #ACD9B2;
             --p-color: #797979;
+            /* f sizes */
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
         }
         /* general styles */
         *{
@@ -32,12 +36,13 @@
         }
         body {
             height: 100vh;
-            font-size: 1.5rem;
+            /* font-size: 1.5rem; */
+            font-size: var(--md);
             font-family: 'Quicksand', sans-serif;
         }
         a{
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: var(--sm);
         }
         /* main content */
         main{
@@ -64,7 +69,8 @@
             align-items: center;
         }
         .text-ctr h1{
-            font-size: 2rem;
+            /* font-size: 2rem; */
+            font-size:var(--lg);
         }
         .text-ctr p, .span-a{
             margin-top: 1rem;
@@ -108,7 +114,7 @@
         }
         .login-form .submit-label .primary-btn{
             height: 6rem;
-            font-size: 2rem;
+            font-size: var(--lg);
             background-color: var(--hospital-green);
             color: var(--white);
         }
@@ -123,7 +129,7 @@
         @media (min-width: 625px) {
             main{
                 margin:0 auto;
-                max-width:50vw;
+                max-width: 400px;
             }
         }
 
