@@ -19,18 +19,21 @@
             --text-input-field: #F7F7F7;
             --dark: #232830;
             --hospital-green: #ACD9B2;
+            --p-color: #9B9B9B;
         }
         /* general styles */
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        html{
             font-size: 62.5%;
         }
         body {
             height: 100vh;
             font-family: 'Quicksand', sans-serif;
-            font-size: 12rem;
+            font-size: 2rem;
         }
         a{
             text-decoration: none;
@@ -71,19 +74,21 @@
         }
         .login-form  label > input, .secondary-btn{
             padding: 0.5rem 1rem;
-            height:5rem;
+            height:4.7rem;
             border:none;
             border-radius: 1.2rem;
         }
         .login-form label > input{
             margin-top: 0.5rem;
+            color: var(--p-color);
             background-color: var(--text-input-field);
         }
         .login-form .submit-label{
             margin: 3.5rem 0;
         }
-        .login-form .submit-label .primary-btn{
+        .login-form .submit-label .primary-btn, .secondary-btn{
             height: 6rem;
+            font-size: 2rem;
             background-color: var(--hospital-green);
             color: var(--white);
         }
@@ -94,7 +99,6 @@
             margin-top: 14rem;
             position: relative;
             bottom: 0;
-            font-size: 2rem;
             background-color: transparent;
             color: var(--hospital-green);
             border: 1px solid var(--hospital-green);
@@ -106,7 +110,7 @@
     </style>
     <main>
         <figure class="logo-ctr">
-            <img src="assets/curso-frontend-developer-practico-main/logos/logo_yard_sale.svg" alt="logo-yard-sale">
+            <img src="../assets/curso-frontend-developer-practico-main/logos/logo_yard_sale.svg" alt="logo-yard-sale">
         </figure>
         <form action="/" class="login-form">
             <label for="email-adress">
