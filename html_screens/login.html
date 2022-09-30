@@ -19,7 +19,7 @@
             --text-input-field: #F7F7F7;
             --dark: #232830;
             --hospital-green: #ACD9B2;
-            --p-color: #9B9B9B;
+            --p-color: #797979;
         }
         /* general styles */
         *{
@@ -43,6 +43,7 @@
         }
         /* main content */
         main{
+            padding: 0 2rem 2rem;
             width: 100vw;
             height: 100%;
             display: grid;
@@ -59,7 +60,7 @@
         }
         /* form */
         .login-form{
-            padding: 0 2rem 2rem;
+            width: 100%;
             height: 100%;
             display: flex;
             flex-flow: column nowrap;
@@ -106,6 +107,13 @@
         /* pseudoclass */
         .primary-btn:hover, .secondary-btn:hover{
             cursor:pointer;
+        }
+        /* desktop */
+        @media (min-width: 625px) {
+            main{
+                margin:0 auto;
+                max-width:50vw;
+            }
         }
     </style>
     <main>
