@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Create account</title>
+</head>
+<style>
+    /* variables */
+        :root {
+            --black:#000000;
+            --white: #FFFFFF;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --dark: #232830;
+            --hospital-green: #ACD9B2;
+            --p-color: #797979;
+             /* f sizes */
+             --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        /* general styles */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        body {
+            height: 100vh;
+            font-size: var(--md);
+            font-family: 'Quicksand', sans-serif;
+        }
+        ul{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        a, .input-titles{
+            font-size: var(--sm);
+        }
+        /* header nav */
+        .menu-nav{
+            margin-bottom: 3.4rem;
+            padding: 1rem 1.8rem;
+            width: 100%;
+            height: 4.6rem;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0px 2px 4px 0px #0000000C;
+        }
+        /* logo */
+        .logo-ctr img{
+            width: 9.6rem;
+            height: 2rem;
+        }
+        /* main content */
+        main{
+            padding: 0 2rem 2rem;
+            width: 100vw;
+            height: auto;
+            display: grid;
+            grid-template-rows: auto auto 2fr;
+            gap: 4rem;
+            place-items: center;
+            place-content: center;
+        }
+        /* searcher */
+        .searcher-filters-ctr{
+            width: 90%;
+            height: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .searcher-filters-ctr label{
+            padding: 0 1.4rem;
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--text-input-field);
+            border-radius: 1.2rem;
+        }
+        .searcher-icon svg{
+            fill: var(--very-light-pink);
+            width: 1.7rem;
+            line-height: 1;
+        }
+        .searcher-filters-ctr  label > input{
+            padding: 0.5rem 1rem;
+            width: 100%;
+            height:4.7rem;
+            background-color: transparent;
+            color: var(--p-color);
+            border:none;
+        }
+        .searcher-filters-ctr  label > input:focus-visible{
+            outline: none;
+        }
+        .login-form .submit-label .primary-btn{
+            height: 6rem;
+            font-size: var(--lg);
+            background-color: var(--hospital-green);
+            color: var(--white);
+        }
+        .filter-list, .filter-options{
+            width: 100%;
+            display: flex;
+        }
+        .filter-list{
+            margin: 2rem 0;
+            justify-content: space-between;
+        }
+        .filter-list li{
+            padding: 0.2rem 1.5rem;
+        }
+        .filter-list li > a{
+            color: var(--very-light-pink);
+        }
+        .filters-options{
+            width: auto;
+        }
+        .filters-options span{
+            margin-right: 1rem;
+        }
+        .filters-options > .options{
+            background: none;
+            color: var(--p-color);
+            border: none;
+        }
+        /* toggle class */
+        .filter-list .selected{
+            border: 1px solid var(--hospital-green);
+            border-radius: 1rem;
+        }
+        .filter-list .selected > a{
+            color: var(--hospital-green);
+        }
+        /* gallery */
+        .gallery-ctr{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 16rem);
+            place-content: center;
+            gap: 2rem;
+        }
+        .gallery-ctr .card-ctr{
+            width: 100%;
+            /* height: 25rem; */
+            display: block;
+            cursor: pointer;
+        }
+        .gallery-ctr .card-ctr .product-img{
+            width: 100%;
+            height:24rem;
+            object-fit: cover;
+            border-radius: 3rem;
+        }
+        .gallery-ctr .card-ctr figcaption{
+            margin: 1rem 0;
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+        }
+        .gallery-ctr .card-ctr figcaption > .details-ctr{
+            width: 65%;
+        }
+        .gallery-ctr .card-ctr figcaption > .icon-img{
+            width:4rem ;
+        }
+        /* desktop */
+        @media (min-width: 625px) {
+            main{
+                margin:0 auto;
+                max-width: 400px;
+            }
+        }
+        </style>
+    <body>
+    <header>
+        <nav class="menu-nav">
+            <figure class="menu-ctr">
+                <img src="../../assets/curso-frontend-developer-practico-main/icons/icon_menu.svg" alt="menu">
+            </figure>
+            <figure class="logo-ctr">
+                <img src="../../assets/curso-frontend-developer-practico-main/logos/logo_yard_sale.svg" alt="logo-yard-sale">
+            </figure>
+            <figure class="cart-ctr">
+                <img src="../../assets/curso-frontend-developer-practico-main/icons/icon_shopping_cart.svg" alt="shopping-cart">
+            </figure>
+        </nav>
+    </header>
+    <main>
+        <section class="searcher-filters-ctr">
+            <label for="searcher">
+                <span class="searcher-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    viewBox="0 0 30 30"
+                    ><path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"></path>
+                    </svg>
+                </span>
+                <input type="text" placeholder="Search product">
+            </label>
+            <!-- todo: create it in js -->
+            <ul class="filter-list">
+                <li class="selected">
+                    <a href="">All</a>
+                </li>
+                <li>
+                    <a href="">Clothes</a>
+                </li>
+                <li>
+                    <a href="">Electronics</a>
+                </li>
+                <li>
+                    <a href="">Furniture</a>
+                </li>
+                <li>
+                    <a href="">Toys</a>
+                </li>
+            </ul>
+            <div class="filters-options">
+                <span>Order:</span>
+                <select name="option-filters" class="options">
+                    <option value="Expensive" selected>Expensive</option>
+                    <option value="Cheaper">Cheaper</option>
+                    <option value="Most recently">Most recently</option>
+                    <option value=""></option>
+                </select>
+            </div>
+        </section>
+        <section class="gallery-ctr">
+            <figure class="card-ctr"> 
+                <img class="product-img" src="../../assets/curso-frontend-developer-practico-main/imgs/bufanda-sm.jpg" alt="img-card">
+                <figcaption>
+                    <div class="details-ctr">
+                        <span>$120,00</span>
+                        <span>Round</span>    
+                    </div>
+                    <img class="icon-img" src="../../assets/curso-frontend-developer-practico-main/icons/bt_add_to_cart.svg" alt="add-to-cart-btn">
+                </figcaption>
+            </figure>
+            <figure class="card-ctr"> 
+                <img class="product-img" src="../../assets/curso-frontend-developer-practico-main/imgs/bufanda-sm.jpg" alt="img-card">
+                <figcaption>
+                    <div class="details-ctr">
+                        <span>$120,00</span>
+                        <span>Round shelf</span>    
+                    </div>
+                    <img class="icon-img" src="../../assets/curso-frontend-developer-practico-main/icons/bt_add_to_cart.svg" alt="add-to-cart-btn">
+                </figcaption>
+            </figure>
+            <figure class="card-ctr"> 
+                <img class="product-img" src="../../assets/curso-frontend-developer-practico-main/imgs/bufanda-sm.jpg" alt="img-card">
+                <figcaption>
+                    <div class="details-ctr">
+                        <span>$120,00</span>
+                        <span>Round shelf</span>    
+                    </div>
+                    <img class="icon-img" src="../../assets/curso-frontend-developer-practico-main/icons/bt_add_to_cart.svg" alt="add-to-cart-btn">
+                </figcaption>
+            </figure>
+        </section>
+    </main>
+</body>
+</html>
