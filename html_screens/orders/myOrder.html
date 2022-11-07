@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>My order</title>
+
+    <style>
+        /* variables */
+            :root {
+                --black:#000000;
+                --white: #FFFFFF;
+                --very-light-pink: #C7C7C7;
+                --text-input-field: #F7F7F7;
+                --dark: #232830;
+                --light-dark: #404040;
+                --hospital-green: #ACD9B2;
+                --p-color: #797979;
+                 /* f sizes */
+                 --sm: 14px;
+                --md: 16px;
+                --lg: 18px;
+            }
+            /* general styles */
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html{
+                font-size: 62.5%;
+            }
+            body {
+                height: 100vh;
+                font-size: var(--md);
+                font-family: 'Quicksand', sans-serif;
+            }
+            ul{
+                list-style-type: none;
+            }
+            a{
+                text-decoration: none;
+            }
+            a, .input-titles{
+                font-size: var(--sm);
+            }
+            /* shared properties */
+            .details, .my-ords-list li{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            main{
+                padding: 2rem;
+                height: 100vh;
+            }
+            .my-ords-list{
+                margin: 0 auto;
+                max-width: 40.5rem;
+                min-height: 100vh;
+
+            }
+            .my-ords-list li{
+                margin-bottom: 5rem;
+                padding-right: 1.8rem;
+                min-height: 4rem;
+            }
+
+            /* first li element */
+            .details{
+                padding: 1rem 1.8rem;
+                width: 100%;
+                font-weight: 700;
+                background-color: var(--text-input-field);
+                border-radius: 0.6rem;
+                box-shadow: 0px 2px 4px 0px #0000000C;
+            }
+            .date-articles{
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                font-size: var(--md);
+            }
+            .date-articles .date{
+                color: var(--black);
+            }
+            .date-articles .articles-counter{
+                font-size: var(--sm);
+                font-weight: lighter;
+                color: var(--p-color);
+            }
+            .details .total{
+                color: var(--light-dark);
+            }
+            /* ///////////////////////////////// */
+
+            .my-ords-list li figure{
+                width: 70%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1.5rem;
+                font-size: var(--sm);
+                color: var(--p-color);
+            }
+            .my-ords-list li figure img{
+                width: 8rem;
+                height: 8rem;
+                object-fit: cover;
+                border-radius: 1.7rem;
+            }
+            .my-ords-list li .price{
+                font-weight: 700;
+                color: var(--light-dark);
+            }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <ul class="my-ords-list">
+            <li class="details">
+                <div class="date-articles">
+                    <span class="date">04.25.2022</span>
+                    <span class="articles-counter">6 articles</span>
+                </div>
+                <span class="total">$560,00</span>
+            </li>
+            <li>
+                <figure>
+                    <img src="../../assets/curso-frontend-developer-practico-main/imgs/bufanda-sm.jpg" alt="bufanda imagen">
+                    <figcaption>Round shelf</figcaption>
+                </figure>
+                <span class="price">$ 120,00</span>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>
