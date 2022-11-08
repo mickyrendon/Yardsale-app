@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Menu mobile</title>
+</head>
+<body>
+    <style>
+         /* variables */
+         :root {
+            --black:#000000;
+            --white: #FFFFFF;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --dark: #232830;
+            --hospital-green: #ACD9B2;
+            --p-color: #797979;
+             /* f sizes */
+             --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        /* general styles */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        body {
+            height: 100vh;
+            font-size: var(--md);
+            font-family: 'Quicksand', sans-serif;
+        }
+        ul{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+        }
+     
+     FIXME, los mediaqueries de mobile a desktop
+       /* @media screen and (max-width: 780px){ */
+        ul{
+            min-width: 0rem;
+        }
+        .menu-ctr{
+            padding:1rem 0.5rem;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            place-items: center;
+            gap: 4rem;
+            border: 0.1rem solid var(--very-light-pink);
+            border-radius: 0.6rem;
+            box-shadow: 0px 2px 4px 0px #0000000C;
+        }   
+        .menu-btn{
+            display: block;
+        }
+        .categories{
+            display: none;
+        }
+        .logo-categories-ctr{
+            justify-content: center;
+        }
+        .menu-ctr .logo{
+            margin-right: 1rem;
+            width: 14.4rem;
+        }
+        .menu-ctr .logo img{
+            width: 100%;
+        }
+        .menu-ctr .user-email li:first-child{
+            display: none;
+        }
+       /* } */
+       @media screen and (min-width:781px) {
+        ul, .logo-categories-ctr{
+            min-width: 20rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .menu-ctr{
+            padding:1rem 0.5rem;
+            width: 100%;
+            display: grid;
+            grid-template-columns:4fr 1fr;
+            place-items: center;
+            gap: 2rem;
+            border: 0.1rem solid var(--very-light-pink);
+            border-radius: 0.6rem;
+            box-shadow: 0px 2px 4px 0px #0000000C;
+        }
+        .menu-btn{
+            display: none;
+        }
+        .logo-categories-ctr{
+            padding-left: 1rem;
+            width: 100%;
+            justify-content: start;
+        }
+       
+        .logo-categories-ctr .categories{
+            display: flex;
+        }
+        .menu-ctr ul li{
+            margin: 0 1rem;
+            font-weight: 700;
+            text-align: start;
+        }
+        .menu-ctr .user-email li{
+            margin: 0;
+        }
+        .menu-ctr .user-email li a{
+            font-weight: normal;
+            color: var(--p-color);
+        }
+        .menu-ctr .user-email li:first-child{
+            display: flex;
+            gap: 1rem;
+        }
+        .menu-ctr .user-email .arrow{
+            max-width: 2rem;
+            transform: rotate(90deg);
+        }
+       }
+
+    </style>
+    <nav class="menu-ctr">
+        <figure class="menu-btn">
+            <img src="../../assets/curso-frontend-developer-practico-main/icons/icon_menu.svg" alt="menu">
+        </figure>
+        <div class="logo-categories-ctr">
+            <figure  class="logo">
+                <img src="../../assets/curso-frontend-developer-practico-main/logos/logo_yard_sale.svg" alt="menu-icon">
+            </figure>
+            <ul class="categories">
+                <li>
+                    <a href="">All</a>
+                </li>
+                <li>
+                    <a href="">Clothes</a>
+                </li>
+                <li>
+                    <a href="">Electronics</a>
+                </li>
+                <li>
+                    <a href="">Furnitures</a>
+                </li>
+                <li>
+                    <a href="">Toys</a>
+                </li>
+                <li>
+                    <a href="">Other</a>
+                </li>
+            </ul>
+        </div>
+        <!-- <ul class="user-orders">
+            <li>
+                <a href="">My orders</a>
+            </li>
+            <li>
+                <a href="">My account</a>
+            </li>
+        </ul> -->
+        <ul class="user-email">
+            <li>
+                <a href="">Platz@example.com</a>
+                <figure class="arrow">
+                    <img src="../../assets/curso-frontend-developer-practico-main/icons/flechita.svg" alt="arrow">
+                </figure>
+            </li>
+            <li>
+                <a href="">
+                    <figure class="cart">
+                        <img src="../../assets/curso-frontend-developer-practico-main/icons/icon_shopping_cart_notification.svg" alt="shopping cart">
+                    </figure>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
