@@ -57,9 +57,17 @@
             main{
                 padding: 2rem;
                 height: 100vh;
+                display: grid;
+                place-items: center;
+            }
+            h1{
+                margin-bottom: 2rem;
+                width: 100%;
+                font-size: var(--md);
+                text-align: start;
             }
             .my-ords-list{
-                margin: 0 auto;
+                width:100%;
                 max-width: 40.5rem;
                 min-height: 100vh;
 
@@ -75,15 +83,13 @@
                 padding: 1rem 1.8rem;
                 width: 100%;
                 font-weight: 700;
-                background-color: var(--text-input-field);
                 border-radius: 0.6rem;
-                box-shadow: 0px 2px 4px 0px #0000000C;
             }
             .date-articles{
-                width: 40%;
+                width: 70%;
                 display: flex;
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0.5rem;
                 font-size: var(--md);
             }
             .date-articles .date{
@@ -98,33 +104,10 @@
                 color: var(--light-dark);
             }
             /* ///////////////////////////////// */
-
-            .my-ords-list li figure{
-                width: 70%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 1.5rem;
-                font-size: var(--sm);
-                color: var(--p-color);
-            }
-            .my-ords-list li figure img{
-                width: 8rem;
-                height: 8rem;
-                object-fit: cover;
-                border-radius: 1.7rem;
-            }
-            .my-ords-list li .price{
-                font-weight: 700;
-                color: var(--light-dark);
-            }
-
-
     </style>
 </head>
 <body>
     <main>
-        <!-- TODO, solo mostrarlo en desktop -->
         <h1>My order</h1>
         <ul class="my-ords-list">
             <li class="details">
@@ -133,13 +116,7 @@
                     <span class="articles-counter">6 articles</span>
                 </div>
                 <span class="total">$560,00</span>
-            </li>
-            <li>
-                <figure>
-                    <img src="../../assets/curso-frontend-developer-practico-main/imgs/bufanda-sm.jpg" alt="bufanda imagen">
-                    <figcaption>Round shelf</figcaption>
-                </figure>
-                <span class="price">$ 120,00</span>
+                <img src="../../assets/curso-frontend-developer-practico-main/icons/flechita.svg" alt="">
             </li>
         </ul>
     </main>
