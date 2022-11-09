@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Home</title>
+
+    <style>
+        /* variables */
+            :root {
+                --black:#000000;
+                --white: #FFFFFF;
+                --very-light-pink: #C7C7C7;
+                --text-input-field: #F7F7F7;
+                --dark: #232830;
+                --ligth-dark:#404040;
+                --hospital-green: #ACD9B2;
+                --p-color: #797979;
+                --light-gray: #EBEBEB;
+                 /* f sizes */
+                 --sm: 14px;
+                --md: 16px;
+                --lg: 18px;
+            }
+              /* general styles */
+              *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html{
+                font-size: 62.5%;
+            }
+            body {
+                height: 100vh;
+                font-size: var(--md);
+                font-family: 'Quicksand', sans-serif;
+            }
+            ul{
+                list-style-type: none;
+            }
+            a{
+                text-decoration: none;
+            }
+            a, .input-titles{
+                font-size: var(--sm);
+            }
+            /* shared styles */
+            .details-ctr, .main-img-ctr{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            /* main styles */
+            .details-ctr{
+                height: 100vh;
+                max-width: 40rem;
+                position: absolute;
+                right: 0;
+                background-color: var(--white);
+                box-shadow: 0px 0px 6px 0px #0000001F;
+            }
+            .main-img-ctr{
+                width: 100%;
+            }
+            .main-img-ctr .close{
+                width: 4rem;
+                height: 4rem;
+                position: absolute;
+                top: 2rem;
+                left: 2rem;
+                border: none;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: var(--lg);
+                background-color: var(--white);
+                color: var(--light-gray);
+                box-shadow: 0px 0px 4px 0px #00000026;
+            }
+            .main-img-ctr .close:hover{
+                cursor: pointer;
+            }
+            .main-img-ctr .close img{
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+            }
+            .main-img-ctr img{
+                height: 50rem;
+                border-bottom-left-radius: 2rem;
+                border-bottom-right-radius: 2rem;
+                object-fit: cover;
+            }
+            .main-img-ctr span{
+                text-align: center;
+            }
+
+            .description-ctr {
+                padding: 1.8rem;
+                position: relative;
+                bottom: 0rem;
+            }
+            .description-ctr .price{
+                margin-bottom: 0.5rem;
+                font-size: var(--md);
+                font-weight: 700;
+                color: var(--ligth-dark);
+            }
+            .description-ctr .name, .description-ctr .description{
+                font-weight: lighter;
+                color: var(--p-color);
+            }
+            .description-ctr .description{
+                margin: 2rem 0;
+            }
+            .description-ctr .add-btn{
+                margin-top: 4rem;
+                padding: 0.6rem 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Quicksand', sans-serif;
+                font-size: var(--md);
+                font-weight: 600;
+                background-color: var(--hospital-green);
+                color: var(--white);
+                border: none;
+                box-shadow: none;
+                border-radius: 0.6rem;
+            }
+       
+    </style>
+</head>
+<body>
+    <article class="details-ctr">
+        <figure class="main-img-ctr">
+            <button class="close">
+                <img src="../../assets/curso-frontend-developer-practico-main/icons/close.svg" alt="close">
+            </button>
+            <img src="../../assets/curso-frontend-developer-practico-main/imgs/bufanda-sm.jpg" alt="product-image">
+            <!-- FIXME, poner los dots correctos -->
+            <span>dots</span>
+        </figure>
+        <article class="description-ctr">
+            <p class="price">$ 120,30</p>
+            <h3 class="name">Bufanda</h3>
+            <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis enim voluptate provident eos impedit aspernatur aliquid odit blanditiis accusantium totam?
+            </p>
+            <button type="button" class="add-btn">
+                <span>
+                    <img src="../../assets/curso-frontend-developer-practico-main/icons/bt_add_to_cart.svg" alt="add to cart icon">
+                </span>
+                <span>Add to cart</span>
+            </button>
+        </article>
+    </article>
+</body>
+</html>
