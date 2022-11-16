@@ -7,7 +7,7 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <title>Menu mobile</title>
+    <title>Navbar desktop</title>
 </head>
 <body>
     <style>
@@ -83,6 +83,42 @@
         .menu-ctr .user-email li:first-child{
             display: none;
         }
+        .menu-dropdown{
+            padding:0 1.5rem;
+            position: fixed;
+            top: 5.5rem;
+            right: 5.5%;
+            /* min-width: 6rem; */
+            width: 16rem;
+            border: 0.1rem solid var(--very-light-pink);
+            border-radius: 0.6rem;
+        }
+        .menu-dropdown ul{
+            display: block;
+            min-width: 100%;
+        }
+        .menu-dropdown ul li{
+            margin: 2rem 0;
+            font-weight: 700;
+            text-align: end;
+        }
+        .menu-dropdown ul li a{
+            font-size: var(--md);
+            color: var(--black);
+        }
+        .menu-dropdown ul li:last-child{
+            margin: 3rem 0 0;
+            padding: 2rem 0;
+            border-top:0.1rem solid var(--very-light-pink);
+        }
+        .menu-dropdown ul li:last-child a{
+            font-size: var(--sm);
+            color: var(--hospital-green);
+
+        }
+        .dropdown:hover{
+            cursor: pointer;
+        }
        /* } */
        @media screen and (min-width:781px) {
         ul, .logo-categories-ctr{
@@ -134,6 +170,14 @@
             max-width: 2rem;
             transform: rotate(90deg);
         }
+        .menu-dropdown ul li{
+            margin: 2rem 0;
+            font-weight: 700;
+            text-align: end;
+        }
+       }
+       .hidden{
+        display: none;
        }
 
     </style>
@@ -175,8 +219,8 @@
             </li>
         </ul> -->
         <ul class="user-email">
-            <li>
-                <a href="">Platz@example.com</a>
+            <li class="dropdown">
+                <a href="#">Platzi@example.com</a>
                 <figure class="arrow">
                     <img src="../../assets/curso-frontend-developer-practico-main/icons/flechita.svg" alt="arrow">
                 </figure>
@@ -189,6 +233,22 @@
                 </a>
             </li>
         </ul>
+        <div class="menu-dropdown hidden">
+            <ul>
+                <li>
+                    <a href="">My orders</a>
+                </li>
+                <li>
+                    <a href="">My account</a>
+                </li>
+                <li>
+                    <a href="">Sign out</a>
+                </li>
+            </ul>
+        </div>
     </nav>
+
+
+    <script src="../../js/menu.js"></script>
 </body>
 </html>
