@@ -119,7 +119,42 @@
         .dropdown:hover{
             cursor: pointer;
         }
-       /* } */
+
+       /* menu mobile */
+       .menu-ctr-mobile{
+            padding:0 4rem;
+            max-width: 100%;
+            height: 100vh;
+            display: grid;
+            gap: 2rem;
+            border: 0.1rem solid var(--very-light-pink);
+            border-radius: 0.6rem;
+        }
+        .menu-ctr-mobile ul li{
+            margin: 4rem 0;
+            font-weight: 700;
+            text-align: start;
+        }
+        .menu-ctr-mobile ul li a{
+            width: 100%;
+            display: inline-flex;
+            font-size: var(--md);
+            color: var(--black);
+        }
+        .menu-ctr-mobile .user-email li{
+            margin: 0;
+        }
+        .menu-ctr-mobile .user-email li a{
+            color: var(--p-color);
+        }
+        .menu-ctr-mobile .user-email li:last-child{
+            padding: 2rem 0;
+        }
+        .menu-ctr-mobile .user-email li:last-child a{
+            font-size: var(--sm);
+            color: var(--hospital-green);
+
+        }
        @media screen and (min-width:781px) {
         ul, .logo-categories-ctr{
             min-width: 20rem;
@@ -233,6 +268,7 @@
                 </a>
             </li>
         </ul>
+        <!-- menu desktop -->
         <div class="menu-dropdown hidden">
             <ul>
                 <li>
@@ -247,8 +283,49 @@
             </ul>
         </div>
     </nav>
+    <!-- menu mobile -->
+    <div class="menu-ctr-mobile hidden">
+        <ul class="catergories">
+            <li>CATEGORIES</li>
+            <li>
+                <a href="">All</a>
+            </li>
+            <li>
+                <a href="">Clothes</a>
+            </li>
+            <li>
+                <a href="">Electronics</a>
+            </li>
+            <li>
+                <a href="">Furnitures</a>
+            </li>
+            <li>
+                <a href="">Toys</a>
+            </li>
+            <li>
+                <a href="">Other</a>
+            </li>
+        </ul>
+        <ul class="user-orders">
+            <li>
+                <a href="">My orders</a>
+            </li>
+            <li>
+                <a href="">My account</a>
+            </li>
+        </ul>
+        <ul class="user-email">
+            <li>
+                <a href="">Platzi@example.com</a>
+            </li>
+            <li>
+                <a href="">Sign out</a>
+            </li>
+        </ul>
+    </div>
 
 
-    <script src="../../js/menu.js"></script>
+    <script src="../../js/menuMobile.js"></script>
+    <script src="../../js/menuDesktop.js"></script>
 </body>
 </html>
