@@ -155,8 +155,109 @@
             color: var(--hospital-green);
 
         }
-       @media screen and (min-width:781px) {
-        ul, .logo-categories-ctr{
+        /* aside shopping cart */
+        /* shared properties */
+        .details, .my-ords-list li{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .aside-resume{
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+            max-width: 40.5rem;
+            height:auto;
+           
+        }
+        .title{
+            margin: 1rem 0 4rem;
+            padding: 0.5rem;
+            display: flex;
+            gap: 2rem;
+        }
+        .my-ords-list{
+            margin: 0 auto;
+            max-width: 40.5rem;
+            min-height: 60vh;
+
+        }
+        .my-ords-list li{
+            margin-bottom: 5rem;
+            /* padding-right: 1.8rem; */
+            min-height: 4rem;
+        }
+
+        /* first li element */
+        .details{
+            padding: 1rem 1.8rem;
+            width: 100%;
+            font-weight: 700;
+            background-color: var(--text-input-field);
+            border-radius: 0.6rem;
+            box-shadow: 0px 2px 4px 0px #0000000C;
+        }
+        .date-articles{
+            padding: 2rem 0;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-size: var(--md);
+        }
+        .date-articles span{
+            color: var(--black);
+        }
+        .details .total{
+            color: var(--light-dark);
+        }
+        /* ///////////////////////////////// */
+        .my-ords-list li figure{
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.5rem;
+            font-size: var(--sm);
+            color: var(--p-color);
+        }
+        .my-ords-list li figure img{
+            width: 8rem;
+            height: 8rem;
+            object-fit: cover;
+            border-radius: 1.7rem;
+        }
+        .my-ords-list li .price{
+            font-weight: 700;
+            color: var(--light-dark);
+        }
+        .my-ords-list li .close-icon img{
+            width: 1.2rem;
+        }
+
+        .add-btn{
+            margin-top: 4rem;
+            padding: 0.6rem 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Quicksand', sans-serif;
+            font-size: var(--md);
+            font-weight: 600;
+            background-color: var(--hospital-green);
+            color: var(--white);
+            border: none;
+            box-shadow: none;
+            border-radius: 0.6rem;
+        }
+
+        /* remove class  */
+        .remove{
+            opacity: 0.13;
+        }
+@media screen and (min-width:781px) {
+        .user-email, .logo-categories-ctr{
             min-width: 20rem;
             display: flex;
             justify-content: space-around;
@@ -210,7 +311,14 @@
             font-weight: 700;
             text-align: end;
         }
-       }
+        .aside-resume{
+            width: 40rem;
+            position: absolute;
+            right: 0;   
+        }
+
+}
+/* gral hidden */
        .hidden{
         display: none;
        }
@@ -261,7 +369,9 @@
                 </figure>
             </li>
             <li>
-                <a href="">
+                <a href="#
+            
+            ;']]'    u">
                     <figure class="cart">
                         <img src="./assets/curso-frontend-developer-practico-main/icons/icon_shopping_cart_notification.svg" alt="shopping cart">
                     </figure>
@@ -323,6 +433,49 @@
             </li>
         </ul>
     </div>
+    <!-- shopping cart resume -->
+    <aside class="aside-resume hidden">
+        <!-- TODO, solo mostrarlo en desktop -->
+        <nav class="title">
+            <img src="./assets/curso-frontend-developer-practico-main/icons/Vector.png" alt="back arrow">
+            <h4>Shopping cart</h4>
+        </nav>
+
+        <ul class="my-ords-list">
+            <li>
+                <figure>
+                    <img src="./assets/curso-frontend-developer-practico-main/imgs/bufanda-sm.jpg" alt="bufanda imagen">
+                    <figcaption>Round shelf</figcaption>
+                </figure>
+                <span class="price">$ 120,00</span>
+                <span class="close-icon">
+                    <img src="./assets/curso-frontend-developer-practico-main/icons/close.svg" alt="close button">
+                </span>
+            </li>
+            <li class="remove">
+                <figure>
+                    <img src="./assets/curso-frontend-developer-practico-main/imgs/bufanda-sm.jpg" alt="bufanda imagen">
+                    <figcaption>Round shelf</figcaption>
+                </figure>
+                <span class="price">$ 120,00</span>
+                <span class="close-icon">
+                    <img src="./assets/curso-frontend-developer-practico-main/icons/close.svg" alt="close button">
+                </span>
+            </li>
+            <li class="details">
+                <div class="date-articles">
+                    <span>Total</span>
+                </div>
+                <span class="total">$560,00</span>
+            </li>
+        </ul>
+        <button type="button" class="add-btn">
+            <span>
+                <img src="./assets/curso-frontend-developer-practico-main/icons/bt_add_to_cart.svg" alt="add to cart icon">
+            </span>
+            <span>Add to cart</span>
+        </button>
+    </aside>
 
 
     <!-- <script src="../../js/menuMobile.js"></script>
