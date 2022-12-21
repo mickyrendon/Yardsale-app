@@ -1,12 +1,13 @@
-export const ar = () => {
-    const card = [{
-        name: 'Round',
-        price: '$120,00',
-        imgPath: './assets/curso-frontend-developer-practico-main/imgs/bufanda-sm.jpg',
-        btnPath: './assets/curso-frontend-developer-practico-main/icons/bt_add_to_cart.svg'   
-    }]
-    //creating node card
-    for(const data of card ){
+export const card = [{
+    name: 'Round',
+    price: '$120,00',
+    imgPath: './assets/curso-frontend-developer-practico-main/imgs/bufanda-sm.jpg',
+    btnPath: './assets/curso-frontend-developer-practico-main/icons/bt_add_to_cart.svg'   
+}]
+
+export const ar = (param) => {
+    //creating node card 
+    for(const data of param ){
     const galleryCtr = document.querySelector('.gallery-ctr')
 
     const figure = document.createElement('figure')

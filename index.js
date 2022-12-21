@@ -1,7 +1,7 @@
 import { toggle } from "./js/menuDesktop.js"
 import { toggleMenu } from "./js/menuMobile.js"
 import { toggleCart } from "./js/shoppingCart.js"
-import { ar } from "./js/gallery.js"
+import { card, ar } from "./js/gallery.js"
 
 // global vars
 const dropdown = document.querySelector('.dropdown')
@@ -15,7 +15,8 @@ menuBtn.addEventListener('click', toggleMenu)
 //aside shopping cart
 cart.addEventListener('click', toggleCart)
 
-// gallery
-ar()
+// gallery function
+ar(card)
+
 // loop()
 
