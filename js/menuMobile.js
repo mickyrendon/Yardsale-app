@@ -5,6 +5,7 @@ export const toggleMenu = () => {
     const asideClosed = aside.classList.contains('hidden')  
     
     if(asideClosed){
+
         return dropdownMobile.classList.toggle('hidden')
     }else{
         aside.classList.toggle('hidden')

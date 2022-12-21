@@ -5,7 +5,7 @@ export const card = [{
     btnPath: './assets/curso-frontend-developer-practico-main/icons/bt_add_to_cart.svg'   
 }]
 
-export const ar = (param) => {
+export const nodeCard = (param) => {
     //creating node card 
     for(const data of param ){
     const galleryCtr = document.querySelector('.gallery-ctr')
@@ -15,9 +15,10 @@ export const ar = (param) => {
     const img = document.createElement('img')
           img.classList.add('product-img')
           img.setAttribute('src', data.imgPath)
+          img.addEventListener('click', remove)
     const figcaption = document.createElement('figcaption')
     const div = document.createElement('div')
-          div.classList.add('details-ctr')
+          div.classList.add('details-ctr-titles')
     const span1 = document.createElement('span')
           span1.innerText = data.price
     const span2 = document.createElement('span')
@@ -33,7 +34,11 @@ export const ar = (param) => {
 
 }
 }
-    
+
+const remove = () => {
+    const detailsCtr = document.querySelector('.details-ctr')
+    detailsCtr.classList.remove('hidden')
+}
 // loop()
 /* 
 const html = 

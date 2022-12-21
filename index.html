@@ -126,12 +126,15 @@
        /* menu mobile */
        .menu-ctr-mobile{
             padding:0 4rem;
-            max-width: 100%;
+            width: 100%;
+            /* max-width: 100%; */
             height: 100vh;
             display: grid;
             gap: 2rem;
+            position: absolute;
             border: 0.1rem solid var(--very-light-pink);
             border-radius: 0.6rem;
+            background-color: var(--white);
         }
         .menu-ctr-mobile ul li{
             margin: 4rem 0;
@@ -166,11 +169,13 @@
             align-items: center;
         }
         .aside-resume{
-            margin: 0 auto;
             padding: 0 2rem;
             width: 100%;
             max-width: 40.5rem;
             height:auto;
+            position: absolute;
+            right: 0;
+            background-color: var(--white);
         }
         .title{
             margin: 1rem 0 4rem;
@@ -189,7 +194,6 @@
             /* padding-right: 1.8rem; */
             min-height: 4rem;
         }
-
         /* first li element */
         .details{
             padding: 1rem 1.8rem;
@@ -253,47 +257,132 @@
             box-shadow: none;
             border-radius: 0.6rem;
         }
+ /*Order details article  */
+        .details-ctr, .main-img-ctr{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+        }
+        .details-ctr{
+            height: 100vh;
+            max-width: 40rem;
+            position: absolute;
+            right: 0;
+            background-color: var(--white);
+            box-shadow: 0px 0px 6px 0px #0000001F;
+        }
+        .main-img-ctr{
+            width: 100%;
+        }
+        .main-img-ctr .close{
+            width: 4rem;
+            height: 4rem;
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: var(--lg);
+            background-color: var(--white);
+            color: var(--light-gray);
+            box-shadow: 0px 0px 4px 0px #00000026;
+        }
+        .main-img-ctr .close:hover{
+            cursor: pointer;
+        }
+        .main-img-ctr .close img{
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+        }
+        .main-img-ctr img{
+            height: 50rem;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            object-fit: cover;
+        }
+        .main-img-ctr span{
+            text-align: center;
+        }
+
+        .description-ctr {
+            padding: 1.8rem;
+            position: relative;
+            bottom: 0rem;
+        }
+        .description-ctr .price{
+            margin-bottom: 0.5rem;
+            font-size: var(--md);
+            font-weight: 700;
+            color: var(--ligth-dark);
+        }
+        .description-ctr .name, .description-ctr .description{
+            font-weight: lighter;
+            color: var(--p-color);
+        }
+        .description-ctr .description{
+            margin: 2rem 0;
+        }
+        .description-ctr .add-btn{
+            margin-top: 4rem;
+            padding: 0.6rem 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Quicksand', sans-serif;
+            font-size: var(--md);
+            font-weight: 600;
+            background-color: var(--hospital-green);
+            color: var(--white);
+            border: none;
+            box-shadow: none;
+            border-radius: 0.6rem;
+        }
   /* gallery */
-  .gallery-ctr{
-                width: 100%;
-                display: grid;
-                grid-template-columns: repeat(auto-fill, 16rem);
-                place-content: center;
-                gap: 2rem;
-            }
-            .gallery-ctr .card-ctr{
-                width: 100%;
-                display: block;
-                cursor: pointer;
-            }
-            .gallery-ctr .card-ctr .product-img{
-                width: 100%;
-                height:16rem;
-                object-fit: cover;
-                border-radius: 3rem;
-            }
-            .gallery-ctr .card-ctr figcaption{
-                margin: 1rem 0;
-                width: 100%;
-                display: inline-flex;
-                justify-content: space-between;
-            }
-            .gallery-ctr .card-ctr figcaption > .details-ctr{
-                width: 50%;
-                font-size: var(--sm);
-            }
-            .details-ctr span:first-child{
-                display: inline-block;
-                font-weight: bold;
-            }
-            .details-ctr span:last-child{
-                color: var(--p-color);
-            }
-            .gallery-ctr .card-ctr figcaption > .icon-img{
-                width:4rem ;
-                border-radius: 50%;
-                box-shadow: 0px 0px 4px 0px #00000026;
-            }
+        .gallery-ctr{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 16rem);
+            place-content: center;
+            gap: 2rem;
+        }
+        .gallery-ctr .card-ctr{
+            width: 100%;
+            display: block;
+            cursor: pointer;
+        }
+        .gallery-ctr .card-ctr .product-img{
+            width: 100%;
+            height:16rem;
+            object-fit: cover;
+            border-radius: 3rem;
+        }
+        .gallery-ctr .card-ctr figcaption{
+            margin: 1rem 0;
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+        }
+        .gallery-ctr .card-ctr figcaption > .details-ctr-titles{
+            width: 50%;
+            font-size: var(--sm);
+        }
+        .details-ctr-titles span:first-child{
+            display: inline-block;
+            font-weight: bold;
+        }
+        .details-ctr-titles span:last-child{
+            color: var(--p-color);
+        }
+        .gallery-ctr .card-ctr figcaption > .icon-img{
+            width:4rem ;
+            border-radius: 50%;
+            box-shadow: 0px 0px 4px 0px #00000026;
+        }
         /* remove class  */
         .remove{
             opacity: 0.13;
@@ -520,6 +609,31 @@
             <span>Add to cart</span>
         </button>
     </aside>
+    <!-- order detail article -->
+    <!-- FIXME, corregir la clase details-ctr porque se mezcla con el span de gallery card -->
+    <article class="details-ctr hidden">
+        <figure class="main-img-ctr">
+            <button class="close">
+                <img src="./assets/curso-frontend-developer-practico-main/icons/close.svg" alt="close">
+            </button>
+            <img src="./assets/curso-frontend-developer-practico-main/imgs/bufanda-sm.jpg" alt="product-image">
+            <!-- FIXME, poner los dots correctos -->
+            <span>dots</span>
+        </figure>
+        <article class="description-ctr">
+            <p class="price">$ 120,30</p>
+            <h3 class="name">Bufanda</h3>
+            <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis enim voluptate provident eos impedit aspernatur aliquid odit blanditiis accusantium totam?
+            </p>
+            <button type="button" class="add-btn">
+                <span>
+                    <img src="./assets/curso-frontend-developer-practico-main/icons/bt_add_to_cart.svg" alt="add to cart icon">
+                </span>
+                <span>Add to cart</span>
+            </button>
+        </article>
+    </article>
     <main>
         <!-- node for gallery cards -->
         <section class="gallery-ctr">
