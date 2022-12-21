@@ -10,4 +10,4 @@ export const toggle = () => {
         aside.classList.toggle('hidden')
         return menu.classList.toggle('hidden')
     }
-}
+} 

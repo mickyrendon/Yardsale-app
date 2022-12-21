@@ -47,7 +47,9 @@
             font-size: var(--sm);
             color: var(--very-light-pink);
         }
-     
+        main{
+            padding: 3.5rem 1rem;
+        }
      FIXME, los mediaqueries de mobile a desktop
        /* @media screen and (max-width: 780px){ */
         ul{
@@ -251,14 +253,58 @@
             box-shadow: none;
             border-radius: 0.6rem;
         }
-
+  /* gallery */
+  .gallery-ctr{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 16rem);
+                place-content: center;
+                gap: 2rem;
+            }
+            .gallery-ctr .card-ctr{
+                width: 100%;
+                display: block;
+                cursor: pointer;
+            }
+            .gallery-ctr .card-ctr .product-img{
+                width: 100%;
+                height:16rem;
+                object-fit: cover;
+                border-radius: 3rem;
+            }
+            .gallery-ctr .card-ctr figcaption{
+                margin: 1rem 0;
+                width: 100%;
+                display: inline-flex;
+                justify-content: space-between;
+            }
+            .gallery-ctr .card-ctr figcaption > .details-ctr{
+                width: 50%;
+                font-size: var(--sm);
+            }
+            .details-ctr span:first-child{
+                display: inline-block;
+                font-weight: bold;
+            }
+            .details-ctr span:last-child{
+                color: var(--p-color);
+            }
+            .gallery-ctr .card-ctr figcaption > .icon-img{
+                width:4rem ;
+                border-radius: 50%;
+                box-shadow: 0px 0px 4px 0px #00000026;
+            }
         /* remove class  */
         .remove{
             opacity: 0.13;
         }
 @media screen and (min-width:781px) {
-        .user-email, .logo-categories-ctr{
-            min-width: 20rem;
+    main{
+        margin:0 auto;
+        max-width: 400px;
+    }
+    .user-email, .logo-categories-ctr{
+        min-width: 20rem;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -369,9 +415,7 @@
                 </figure>
             </li>
             <li>
-                <a href="#
-            
-            ;']]'    u">
+                <a href="#">
                     <figure class="cart">
                         <img src="./assets/curso-frontend-developer-practico-main/icons/icon_shopping_cart_notification.svg" alt="shopping cart">
                     </figure>
@@ -476,7 +520,11 @@
             <span>Add to cart</span>
         </button>
     </aside>
-
+    <main>
+        <!-- node for gallery cards -->
+        <section class="gallery-ctr">
+        </section>
+    </main>
 
     <!-- <script src="../../js/menuMobile.js"></script>
     <script src="../../js/menuDesktop.js"></script> -->
