@@ -195,3 +195,9 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,node
 
 package.json
+menuDesktop.js
+orderDetails.js
+shoppingCart.js
+
+
+

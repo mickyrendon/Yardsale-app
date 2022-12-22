@@ -1,3 +1,5 @@
+import { remove } from "./toggleMenus.js"
+
 export const card = [{
     name: 'Round',
     price: '$120,00',
@@ -32,29 +34,5 @@ export const nodeCard = (param) => {
     figcaption.append(div, imgIcon)
     div.append(span1, span2)      
 
+    }
 }
-}
-
-const remove = () => {
-    const detailsCtr = document.querySelector('.details-ctr')
-    detailsCtr.classList.remove('hidden')
-}
-// loop()
-/* 
-const html = 
-    `<figure class="card-ctr"> 
-        <img class="product-img" src= ${data.imgPath} alt="img-card">
-        <figcaption>
-            <div class="details-ctr">
-                <span>${data.name}</span>
-                <span>${data.price}</span>    
-            </div>
-            <img class="icon-img" src= ${data.btnPath} alt="add-to-cart-btn">
-        </figcaption>
-    </figure> `        
-    
-    const galleryCtr = document.querySelector('.gallery-ctr')
-    galleryCtr.innerHTML += html
-
-
-*/
